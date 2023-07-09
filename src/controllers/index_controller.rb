@@ -2,7 +2,7 @@
 
 require 'sinatra'
 
-## PlayersController
+## IndexController
 class IndexController < Sinatra::Base
   get '/' do
     'Hello World'
