@@ -3,6 +3,7 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require_relative '../models/journal'
+require_relative '../utils/RenderUtils'
 
 ## JournalController
 class JournalController < Sinatra::Base
@@ -12,11 +13,11 @@ class JournalController < Sinatra::Base
     @journal.description = 'description 500'
     @journal.save
 
-    @journal.to_json
+    RenderUtils.render_one(@journal)
   end
 
   get '/journal' do
     @users = Journal.all
-    @users.to_json
+    RenderUtils.render_many(@users)
   end
 end
