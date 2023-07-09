@@ -33,7 +33,7 @@ rackup config.ru
 
 The app will run on `localhost:9292`
 
-> The `.env` config is only used for production, in test enviroment the docker postgres is used. You do not need to config him.
+> The `.env` config is only used for production, in development and test enviroment the docker postgres is used. You do not need to config him.
 
 ## Usage
 
