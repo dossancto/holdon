@@ -16,19 +16,25 @@ I'm using postgres.
 - clone repo
 
 ```sh
-git clone {url}
+$ git clone {url}
 ```
 
 - install dependencies
 
 ```sh
-bundle install
+$ bundle install
+```
+
+- Start Postgres in docker
+
+```sh
+$ sudo docker compose up -d
 ```
 
 - Run 
 
 ```sh
-rackup config.ru
+$ rackup config.ru
 ```
 
 The app will run on `localhost:9292`
